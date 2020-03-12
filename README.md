@@ -203,8 +203,8 @@ function performGetRequest(resource,data) {
 
 ## 7. Logging and Debugging
 
-### 7.1 Simple logging function with logging levels
->Perform GET request with some headers and query string
+### 7.1 log() function
+>Simple logging function with logging levels
 ```javascript
 var LL_ALL = 'LOG_LEVEL_ALL';
 var LL_DEBUG = 'LOG_LEVEL_DEBUG';
