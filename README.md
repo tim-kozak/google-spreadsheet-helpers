@@ -3,7 +3,7 @@ Useful javascript functions for google spreadsheets
 
 ## 1. Tab Manipulations
 
-###1.1 Get existing tab(sheet)
+### 1.1 Get existing tab(sheet)
 >Returns tab instance if exists 
 ```javascript
 function getTab(name) {
@@ -12,7 +12,7 @@ function getTab(name) {
 }
 ```
 
-###1.2 Check if tab(sheet) exists
+### 1.2 Check if tab(sheet) exists
 >Returns true or false if tab exists
 ```javascript
 function isTabExist(name) {
@@ -21,7 +21,7 @@ function isTabExist(name) {
 }
 ```
 
-###1.3 Create new tab(sheet)
+### 1.3 Create new tab(sheet)
 >Creates new tab if name is available
 ```javascript
 function createTab(name) {
@@ -33,7 +33,7 @@ function createTab(name) {
 }
 ```
 
-###1.4 Get or create tab(sheet)
+### 1.4 Get or create tab(sheet)
 >Returns existing tab or creates one 
 ```javascript
 function getOrCreateTab(name) {
@@ -41,7 +41,7 @@ function getOrCreateTab(name) {
 }
 ```
 
-###1.5 Copy tab(sheet)
+### 1.5 Copy tab(sheet)
 >Duplicates tab with new name
 ```javascript
 function copyTab(template,newName) {
@@ -63,7 +63,7 @@ function copyTab(template,newName) {
 
 ## 2. Row manipulations
 
-###2.1 VLookup
+### 2.1 VLookup
 >Search for a value in selected column - returns row number
 ```javascript
 function vlookup(tab, columnNumber, searchValue) {
@@ -82,7 +82,7 @@ function vlookup(tab, columnNumber, searchValue) {
 
 ## 3. Column manipulations
 
-###3.1 HLookup
+### 3.1 HLookup
 >Search for a value in selected row - returns column address in A1 notation eq: AH
 ```javascript
 function hlookup(sheet, row, value) {
@@ -115,7 +115,7 @@ function hlookup(sheet, row, value) {
 
 ## 4. Range and Cell manipulations
 
-###4.1 Get range values
+### 4.1 Get range values
 >Select range of cells in specific tab and return values
 ```javascript
 function getRangeValue(tabName,range) {
@@ -126,7 +126,7 @@ function getRangeValue(tabName,range) {
 }
 ```
 
-###4.2 Get cell value
+### 4.2 Get cell value
 >Select a cell in specific tab and return its value
 ```javascript
 function getRangeValue(tabName,range) {
@@ -138,7 +138,7 @@ function getRangeValue(tabName,range) {
 
 ## 5. Thread manipulations
 
-###5.1 Wait/Sleep function
+### 5.1 Wait/Sleep function
 >Wait for specified amount of time to delay the execution. eq: helpful not to get "too many requests" from API  
 ```javascript
 function sleep(milliseconds) {
@@ -149,7 +149,7 @@ function sleep(milliseconds) {
 
 ## 6. External requests
 
-###6.1 Simple GET request
+### 6.1 Simple GET request
 >Perform GET request with some headers and query string
 ```javascript
 function performGetRequest(resource,queryString) {
@@ -175,7 +175,7 @@ function performGetRequest(resource,queryString) {
 }
 ```
 
-###6.2 Simple PUT request
+### 6.2 Simple PUT request
 >Perform PUT request with some headers and data object
 ```javascript
 function performGetRequest(resource,data) {
@@ -203,7 +203,7 @@ function performGetRequest(resource,data) {
 
 ## 7. Logging and Debugging
 
-###7.1 Simple logging function with logging levels
+### 7.1 Simple logging function with logging levels
 >Perform GET request with some headers and query string
 ```javascript
 var LL_ALL = 'LOG_LEVEL_ALL';
@@ -229,7 +229,7 @@ function log(string,logLevel) {
     log('|--| range query - [done]',LL_INFO)
 ```
 
-###7.2 Output some debug data to a range
+### 7.2 Output some debug data to a range
 >Use some technical range to output debug data
 ```javascript
 function getDebuggRange(length) {
