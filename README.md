@@ -85,18 +85,18 @@ function vlookup(tab, columnNumber, searchValue) {
 ### 3.1 HLookup
 >Search for a value in selected row - returns column address in A1 notation eq: AH
 ```javascript
-function hlookup(sheet, row, value) {
+function hlookup(sheet, rowNumber, searchValue) {
   var foundData = false;
   var foundIndex = 0;
   const lastColumn = sheet.getLastColumn();
   
-  var range = sheet.getRange(row,1,1,lastColumn);
+  var range = sheet.getRange(rowNumber,1,1,lastColumn);
   var values = range.getValues();
   if (values && values[0]) {
     values = values[0];
     var i;
     for(i=0;i<values.length;++i){
-      if (values[i]==value){
+      if (values[i]==searchValue){
         foundIndex = i;
         foundData = true;
         break;
@@ -106,8 +106,8 @@ function hlookup(sheet, row, value) {
   if (!foundData) 
     return null;
 
-  var column = foundIndex+1;
-  var cellAddr = sheet.getRange(row, column).getA1Notation();
+  var columnNumber = foundIndex+1;
+  var cellAddr = sheet.getRange(rowNumber, columnNumber).getA1Notation();
   var withNoDigits = cellAddr.replace(/[0-9]/g, '');
   return withNoDigits;
 }
