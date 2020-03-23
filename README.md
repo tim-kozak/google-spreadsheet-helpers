@@ -152,7 +152,7 @@ function sleep(milliseconds) {
 ### 6.1 Simple GET request
 >Perform GET request with some headers and query string
 ```javascript
-function performGetRequest(resource,queryString) {
+function performGETRequest(resource,queryString) {
   const token = "some auth token";
   const host = "https://api.some.com/v1/";
   const url = host + resource + '?'+queryString+'&api_token='+token;
@@ -178,7 +178,7 @@ function performGetRequest(resource,queryString) {
 ### 6.2 Simple PUT request
 >Perform PUT request with some headers and data object
 ```javascript
-function performGetRequest(resource,data) {
+function performPUTRequest(resource,data) {
   const token = "some auth token";
   const host = "https://api.some.com/v1/";
   const url = host + resource + '?'+queryString+'&api_token='+token;
