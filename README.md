@@ -118,7 +118,7 @@ function hlookup(sheet, rowNumber, searchValue) {
 ### 4.1 Get range values
 >Select range of cells in specific tab and return values
 ```javascript
-function getRangeValue(tabName,range) {
+function getRangeValues(tabName,range) {
   const tab = getTab(tabName);
   const rangeValuesMatrix = tab.getRange(range).getValues();
  
