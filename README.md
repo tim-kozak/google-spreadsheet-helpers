@@ -257,3 +257,19 @@ if( CURRENT_LL == LL_DEBUG ) {
   printSomethingToDebug(data);
 }
 ```
+## 8. Triggers
+
+```
+function onEdit(e) {
+  update();
+}
+function onOpen(e) {
+  update();
+}
+function doPost(e) {
+  update();
+}
+function doGet(e) {
+  update();
+}
+```
